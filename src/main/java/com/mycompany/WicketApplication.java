@@ -7,6 +7,13 @@ public class WicketApplication extends WebApplication {
 
     @Override
     public Class<? extends WebPage> getHomePage() {
-        return HomePage.class;
+        return UnorderedListTreePage.class;
+    }
+
+    @Override
+    protected void init() {
+        super.init();
+
+        this.getMarkupSettings().setStripWicketTags(true);
     }
 }
