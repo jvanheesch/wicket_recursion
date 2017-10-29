@@ -14,6 +14,7 @@
         <wicket.version>7.9.0</wicket.version>
         <java.language.version>8</java.language.version>
         <maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+        <version.dep.wicket-bootstrap>0.10.16</version.dep.wicket-bootstrap>
     </properties>
 
     <dependencies>
@@ -31,6 +32,11 @@
             <groupId>jvanheesch</groupId>
             <artifactId>wicket_util</artifactId>
             <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>de.agilecoders.wicket</groupId>
+            <artifactId>wicket-bootstrap-core</artifactId>
+            <version>${version.dep.wicket-bootstrap}</version>
         </dependency>
     </dependencies>
 

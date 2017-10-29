@@ -1,5 +1,7 @@
 package com.mycompany;
 
+import de.agilecoders.wicket.core.Bootstrap;
+import de.agilecoders.wicket.core.settings.BootstrapSettings;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.protocol.http.WebApplication;
 
@@ -7,7 +9,7 @@ public class WicketApplication extends WebApplication {
 
     @Override
     public Class<? extends WebPage> getHomePage() {
-        return UnorderedListTreePage.class;
+        return DropDownPage.class;
     }
 
     @Override
@@ -15,5 +17,7 @@ public class WicketApplication extends WebApplication {
         super.init();
 
         this.getMarkupSettings().setStripWicketTags(true);
+
+        Bootstrap.install(this, new BootstrapSettings());
     }
 }
