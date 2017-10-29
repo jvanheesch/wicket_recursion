@@ -1,6 +1,7 @@
 package com.mycompany;
 
 import com.mycompany.iface.TreeNode;
+import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.panel.GenericPanel;
 import org.apache.wicket.model.IModel;
@@ -20,6 +21,9 @@ public class UnorderedListTreePanel<N extends TreeNode<N>> extends GenericPanel<
 
         this.add(new Label("text", this.getModel()));
 
-        this.add(new PanelRepeater<N>("children", new LambdaModel<>(this.getModel(), TreeNode::getChildren), UnorderedListTreePanel::new));
+        WebMarkupContainer ul = new WebMarkupContainer("ul");
+        this.add(ul);
+
+        ul.add(new PanelRepeater<N>("children", new LambdaModel<>(this.getModel(), TreeNode::getChildren), UnorderedListTreePanel::new));
     }
 }
