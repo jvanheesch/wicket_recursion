@@ -20,6 +20,6 @@ public class UnorderedListTreePanel<N extends TreeNode<N>> extends GenericPanel<
 
         this.add(new Label("text", this.getModel()));
 
-        this.add(new PanelRepeater<N>("children", new LambdaModel<>(this.getModel(), TreeNode::getChildren), UnorderedListTreePanel::new));
+        this.add(new FunctionalMarkupRepeater<N>("children", new LambdaModel<>(this.getModel(), TreeNode::getChildren), UnorderedListTreePanel::new));
     }
 }
