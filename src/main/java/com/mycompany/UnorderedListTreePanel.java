@@ -24,6 +24,6 @@ public class UnorderedListTreePanel<N extends TreeNode<N>> extends GenericPanel<
         WebMarkupContainer ul = new WebMarkupContainer("ul");
         this.add(ul);
 
-        ul.add(new PanelRepeater<N>("children", new LambdaModel<>(this.getModel(), TreeNode::getChildren), UnorderedListTreePanel::new));
+        ul.add(new FunctionalMarkupRepeater<N>("children", new LambdaModel<>(this.getModel(), TreeNode::getChildren), UnorderedListTreePanel::new));
     }
 }

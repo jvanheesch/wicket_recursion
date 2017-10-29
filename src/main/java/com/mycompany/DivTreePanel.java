@@ -25,7 +25,7 @@ public class DivTreePanel<N extends TreeNode<N>> extends GenericPanel<N> {
 
         this.add(new Label("text", this.getModel()));
 
-        this.add(new PanelRepeater<N>("children", new LambdaModel<>(this.getModel(), TreeNode::getChildren), DivTreePanel::new));
+        this.add(new FunctionalMarkupRepeater<N>("children", new LambdaModel<>(this.getModel(), TreeNode::getChildren), DivTreePanel::new));
     }
 
     @Override
