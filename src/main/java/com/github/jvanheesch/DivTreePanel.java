@@ -1,6 +1,8 @@
-package com.mycompany;
+package com.github.jvanheesch;
 
-import com.mycompany.iface.TreeNode;
+import com.github.jvanheesch.tree.iface.TreeNode;
+import com.github.jvanheesch.wicket.FunctionalMarkupRepeater;
+import com.github.jvanheesch.wicket.LambdaModel;
 import org.apache.wicket.markup.head.CssHeaderItem;
 import org.apache.wicket.markup.head.IHeaderResponse;
 import org.apache.wicket.markup.html.basic.Label;
