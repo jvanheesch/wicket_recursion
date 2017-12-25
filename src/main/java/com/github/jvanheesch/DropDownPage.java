@@ -1,7 +1,7 @@
-package com.mycompany;
+package com.github.jvanheesch;
 
-import com.mycompany.iface.SimpleNamedNode;
-import com.mycompany.impl.SimpleNamedNodeImpl;
+import com.github.jvanheesch.tree.iface.SimpleNamedNode;
+import com.github.jvanheesch.tree.impl.SimpleNamedNodeImpl;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
