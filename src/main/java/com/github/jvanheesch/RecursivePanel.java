@@ -1,4 +1,4 @@
-package com.mycompany;
+package com.github.jvanheesch;
 
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.panel.Panel;

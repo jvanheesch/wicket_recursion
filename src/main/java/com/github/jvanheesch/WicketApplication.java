@@ -1,4 +1,4 @@
-package com.mycompany;
+package com.github.jvanheesch;
 
 import de.agilecoders.wicket.core.Bootstrap;
 import de.agilecoders.wicket.core.settings.BootstrapSettings;

@@ -1,12 +1,12 @@
-package com.mycompany;
+package com.github.jvanheesch;
 
-import com.mycompany.iface.SimpleNamedNode;
-import com.mycompany.impl.SimpleNamedNodeImpl;
+import com.github.jvanheesch.tree.iface.SimpleNamedNode;
+import com.github.jvanheesch.tree.impl.SimpleNamedNodeImpl;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.model.IModel;
 import org.apache.wicket.model.LoadableDetachableModel;
 
-public class DivTreePage extends WebPage {
+public class UnorderedListTreePage extends WebPage {
     private static final long serialVersionUID = 687301382217727377L;
 
     @Override
@@ -30,7 +30,7 @@ public class DivTreePage extends WebPage {
                                         .addChild(new SimpleNamedNodeImpl("222"))));
 
 
-        this.add(new DivTreePanel<>("tree", createModelForRoot(root)));
+        this.add(new UnorderedListTreePanel<>("tree", createModelForRoot(root)));
     }
 
     private static IModel<SimpleNamedNode> createModelForRoot(SimpleNamedNode root) {
